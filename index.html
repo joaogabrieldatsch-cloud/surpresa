@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Fe</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <!-- Font Awesome 6 (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/birthday.css">  <!-- NOVO -->
+
+    <!-- Pré-carregamento dos áudios -->
+    <link rel="preload" href="assets/music/sopro.mp3" as="audio">
+    <link rel="preload" href="assets/music/surpresa.mp3" as="audio">
+</head>
+<body>
+    <!-- TELA INICIAL (INTRO) -->
+    <div id="intro-screen" class="screen active">
+        <div class="intro-container">
+            <!-- Imagem de fundo (a que você enviou) -->
+            <img src="assets/images/tela-inicial.png" alt="Fundo especial" class="intro-bg">
+            
+            <!-- Camada de conteúdo sobre a imagem -->
+            <div class="intro-content">
+                <img src="assets/images/title-home.png" alt="tengo una sorpresa para ti..." class="intro-title-image" id="title-image">
+                <button id="open-button" class="open-button">
+                    ABRIR<i class="fa-solid fa-gift"></i> 
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Futuramente: Tela do notebook em zoom, depois a festa -->
+
+    <!-- TELA DO BOLO (SEGUNDA TELA) -->
+<div id="birthday-screen" class="screen">
+    <div class="birthday-container">
+        <img src="assets/images/mesa-bolo.png" alt="Mesa de aniversário" class="birthday-bg">
+        
+        <div class="gif vela-gif" id="vela1">
+            <img src="assets/images/gifs/vela.gif" alt="Vela">
+        </div>
+
+        <div class="gif vela-gif-two" id="vela2">
+            <img src="assets/images/gifs/vela.gif" alt="Vela">
+        </div>
+
+        <div class="gif hello-kitty">
+            <img src="assets/images/gifs/kitty.gif" alt="Vela">
+        </div>
+
+        <div class="gif sylvia">
+            <img src="assets/images/gifs/sylvia.gif" alt="sylvia">
+        </div>
+
+        <div class="gif miku">
+            <img src="assets/images/gifs/miku.gif" alt="hatsune miku">
+        </div>
+
+        <div class="gif teto">
+            <img src="assets/images/gifs/teto.gif" alt="teto">
+        </div>
+
+        <div class="gif pera">
+            <img src="assets/images/gifs/pera.gif" alt="pera teto">
+        </div>
+
+        <div class="gif shy">
+            <img src="assets/images/gifs/shy.gif" alt="fluttershy">
+        </div>
+
+        <div class="gif cat">
+            <img src="assets/images/gifs/cat.gif" alt="cat">
+        </div>
+
+        <div class="gif pudin">
+            <img src="assets/images/gifs/pudin.gif" alt="pudinzinho">
+        </div>
+
+        <div class="gif cat-two">
+            <img src="assets/images/gifs/cat-two.gif" alt="cat">
+        </div>
+
+        <div class="gif cat-tree">
+            <img src="assets/images/gifs/cat-tree.gif" alt="cat">
+        </div>
+
+        <div class="gif caramujo">
+            <img src="assets/images/gifs/caramujo.gif" alt="caramujo">
+        </div>
+
+        <div class="gif stitch">
+            <img src="assets/images/gifs/stitch.gif" alt="caramujo">
+        </div>
+
+        <div class="gif bmo">
+            <img src="assets/images/gifs/bmo.gif" alt="caramujo">
+        </div>
+
+        <div class="birthday-content">
+
+            <!-- Aqui depois vamos adicionar o bolo, presentes e confetes -->
+        </div>
+    </div>
+</div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/intro.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/birthday.js"></script>  <!-- NOVO -->
+    <script src="js/audioManager.js"></script>  <!-- NOVO - GERENCIADOR DE ÁUDIOS -->
+</body>
+</html>

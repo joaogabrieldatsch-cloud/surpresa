@@ -1,0 +1,110 @@
+/* Tela inicial - estilo notebook/convite */
+#intro-screen {
+    background: #0b0b15;
+}
+
+.intro-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* garante que a imagem cubra toda a tela sem distorcer */
+    object-position: center;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;  /* Isso faz o texto ficar em cima e o botão embaixo */
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+    width: 100%;
+    height: 100%;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+
+
+.open-button {
+    background: #ff6b81;
+    border: none;
+    border-bottom: 4px solid #FFE8C8;  /* Borda inferior dourada */
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.2s, border-bottom 0.2s;
+    font-family: inherit;
+    letter-spacing: 2px;
+    display: inline-flex;      /* Para alinhar ícone e texto */
+    align-items: center;       /* Centraliza verticalmente ícone e texto */
+    gap: 12px;                 /* Espaço entre o ícone e o texto ABRIR */
+}
+
+.open-button i {
+    font-size: 1.6rem;         /* Tamanho do ícone um pouco menor que o texto */
+    color: #FFE8C8;            /* Ícone dourado combinando com a borda */
+}
+
+.open-button:hover {
+    background: #ff4757;
+    transform: scale(1.02);
+}
+
+.open-button:active {
+    transform: scale(0.98);
+}
+
+/* Animação suave de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para a imagem de título */
+.intro-title-image {
+    max-width: 30%;        /* Largura máxima de 80% da tela */
+    width: auto;           /* Mantém a proporção original */
+    height: auto;          /* Altura automática para não distorcer */
+    display: block;        /* Comportamento de bloco */
+    margin: 0 auto;        /* Centraliza horizontalmente */
+    margin-bottom: 2rem;   /* Mesmo espaçamento que o texto tinha antes */
+    animation: fadeInUp 1.2s ease-out; /* Mesma animação suave */
+}
+
+/* Garantir que título e botão tenham transição suave */
+.intro-title-image,
+.open-button {
+    transition: all 0.3s ease;
+}
+
+/* Evitar que o zoom afete o conteúdo interno de forma estranha */
+#intro-screen {
+    overflow: hidden;
+}
+
+.zoom-effect {
+    animation: zoomInScreen 1.2s ease-in-out forwards;
+    transform-origin: center center;
+}
+

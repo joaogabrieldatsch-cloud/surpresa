@@ -1,0 +1,50 @@
+/* Animações para o título e botão sumirem */
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100px);
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100px);
+        visibility: hidden;
+    }
+}
+
+/* Zoom na tela do notebook */
+@keyframes zoomInScreen {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(5.8);
+    }
+}
+
+/* Classe para aplicar o zoom no container */
+.zoom-effect {
+    animation: zoomInScreen 5.2s ease-in-out forwards;
+}
+
+/* Classes para fazer os elementos sumirem */
+.hide-up {
+    animation: fadeOutUp 0.6s ease-in forwards;
+}
+
+.hide-down {
+    animation: fadeOutDown 0.6s ease-in forwards;
+}
+
